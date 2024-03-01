@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./carrito.css">
+    <title>Reservas de clases</title>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">Plataforma</a>
+            <a class="navbar-brand" href="../landing/index.html">Landing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Clases</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#productos">Aranceles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carrito">Carrito</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Carrito -->
+
+    <div class="container-fluid mt-5">
+        <h2 class="mb-5 text-center">Reserva la clase que prefieras</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="table-responsive cart-container">
+                    <table id="myTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Clases</th>
+                                <th>Estilo</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartBody">
+                            <!-- Filas del carrito se agregarán dinámicamente aquí -->
+                        </tbody>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <strong>Total = $ <span id="total" class="total">0</span></strong>
+                        </div>
+                    </div>
+                    <div class="cart-buttons">
+                        <button class="btn btn-danger empty-cart-btn" id="emptyCartButton">Vaciar</button>
+                        <button class="btn btn-success" id="buyButton">Reservar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="messageContainer"></div> <!-- mensajes -->
+        </div>
+    </div>
+
+    <!-- carrusel de productos-->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <!-- <div class="carousel-indicators" id="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="./img/aksaya.jpg" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Clase de Yoga N°1</h5>
+                    <h6>Estilo: Hatha Yoga</h6>
+                    <button class="btn btn-primary add-to-cart" data-bs-slide-to="0">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="./img/rasa.jpg" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Clase de Yoga N°2</h5>
+                    <h6>Estilo: Ashtanga Yoga</h6>
+                    <button class="btn btn-primary add-to-cart" data-bs-slide-to="1">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/aksaya.jpg" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Clase de Yoga N°3</h5>
+                    <p>Estilo: Vinyasa Yoga</p>
+                    <button class="btn btn-primary add-to-cart" data-bs-slide-to="2">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./img/rasa.jpg" class="d-block w-50 mx-auto" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Clase de Yoga N°4</h5>
+                    <h6>Estilo: Hatha Yoga</h6>
+                    <button class="btn btn-primary add-to-cart" data-bs-slide-to="3">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./carrito.js"></script>
+</body>
+</html>
+
+

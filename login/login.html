@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gokulam Ashtanga Yoga Ashram</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <h2>Bienvenido! Accede a nuestra Plataforma</h2>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Cuenta nueva</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>o registrate abajo</span>
+		  <input type="text" id="signupName" placeholder="Name" autocomplete="current-name" />
+		  <input type="email" id="signupEmail" placeholder="Email" autocomplete="current-email" />
+		  <input type="password" id="signupPassword" placeholder="Password" autocomplete="current-password" />
+		  <button id="signupButton">Listo! Registrarme</button>
+		<div id="signupMessage" class="message"></div>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Usuarios</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>o usa tu cuenta registrada</span>
+		  <input type="email" id="signinEmail" placeholder="Email" autocomplete="current-email" />
+		  <input type="password" id="signinPassword" placeholder="Password" autocomplete="current-password" />
+		  <button id="signinButton">Entremos!</button>
+		  <div id="signinMessage" class="message"></div>        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Hey!</h1>
+            <p>
+              Si ya tenés tu cuenta registrada, entoces accede a nuestra
+              Plataforma
+            </p>
+            <button class="ghost" id="signIn">Dale!</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hola!</h1>
+            <p>
+              Si no tenes una cuenta, podes ser parte de nuestra comunidad de
+              forma gratis
+            </p>
+            <button class="ghost" id="signUp">Registrarme</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+    <script src="./users/db.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

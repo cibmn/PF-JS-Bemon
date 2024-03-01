@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	font-family: "Montserrat", sans-serif;
+	color: #535878;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #eeeae6;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+h5{
+    color: #fff;
+}
+
+h6{
+    color: white;
+}
+
+
+
+#navbarNav {
+    margin-left: auto; 
+}
+
+.navbar-nav {
+    float: none; 
+}
+
+.navbar-nav li {
+    margin-left: 10px; 
+}
+
+.container-fluid {
+    max-width: 800px;
+    margin: auto;
+}
+
+#messageContainer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #535878;
+}
+
+.carousel-item {
+    height: 420px;
+}
+
+.cart-container {
+    margin-top: 20px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px; 
+}
+
+.cart-table {
+    margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+    text-align: center;
+}
+
+.cart-table img {
+    max-width: 20px; 
+}
+
+.cart-total {
+    font-weight: bold;
+}
+
+.cart-buttons {
+    margin-top: 10px;
+    display: flex;
+}
+
+.cart-scroll {
+    overflow: hidden;
+}
+
+.btn_success, .empty-cart-btn {
+    margin-right: 5px;
+}
+
+.add-to-cart-btn {
+    margin-top: 20px; 
+}
+
+.empty-cart-btn {
+    margin-left: 20px;
+}
+
+/* .carousel-buttons {
+    margin-top: 20px;
+} */
+
+.btn_success,
+.empty-cart-btn,
+#buyButton,
+#emptyCarButton {
+    margin-right: 5px;
+    color: #fff;
+    background-color: #c4c4c4;
+    border-color: #cacaca;
+    justify-content: space-between;
+    transition: background-color 0.5s ease;
+}
+
+#buyButton:hover {
+    background-color: #bdd1c5;
+}
+
+#buyButton:active {
+    transform: scale(1);
+}
+
+#buyButton:focus {
+    outline: none;
+}
+
+#emptyCarButton:hover {
+    background-color: #d3a29d;
+}
+
+#emptyCarButton:active {
+    transform: scale(1);
+}
+
+#emptyCarButton:focus {
+    outline: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #9eaba2;
+    border-color: #bdd1c5;
+}
+
+.carousel-item img {
+    margin: 0 auto; 
+    display: block;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(0 * var(--bs-gutter-x));
+    margin-left: calc(0* var(--bs-gutter-x));
+    margin-bottom: calc(2 * var(--bs-gutter-x));
+}
+
+.carousel-inner img {
+    max-width: 30%; 
+    height: auto;
+    margin: auto;
+}
+
+.carousel-caption {
+    color: #fcfcfc;
+    background: rgba(169, 169, 169, 0.3); 
+    padding: 5px; 
+    border-radius: 5px; 
+}
+
+
