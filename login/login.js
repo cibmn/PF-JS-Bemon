@@ -60,7 +60,7 @@ signinButton.addEventListener('click', () => {
 
 
 
-// Función para validar a un usuario existente con API ficticia para simular la autenticación
+// Función para validar a un usuario existente con API ficticia para simular la validación
 function authenticateUser(email, password) {
   return fetch('https://jsonplaceholder.typicode.com/posts/1', {
     method: 'GET',
